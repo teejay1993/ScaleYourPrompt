@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+# Optional: pin Node via config (or use .nvmrc instead)
+[build.environment]
+  NODE_VERSION = "22"
+
+# Optional: SPA fallback (only if you add client-side routing)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
